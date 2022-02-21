@@ -1,0 +1,104 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+h1 {
+    color: #3f51b5;
+}
+
+  snack-bar-container.mat-snack-bar-container {
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: block;
+    margin: 24px;
+    max-width: 33vw;
+    min-width: 144px;
+    padding: 14px 16px;
+    min-height: 48px;
+    transform-origin: center;
+    background-color: #3f51b5;
+    color:white;
+}
+.mat-simple-snackbar-action button {
+    max-height: 36px;
+    min-width: 0;
+    color: white;
+    cursor:pointer!important;
+}
+
+table.mat-table{
+    box-shadow: none;
+}
+
+/* tr.mat-header-row {
+    border-bottom : 1.5px solid rgb(100, 100, 100);
+}
+ tr.mat-footer-row{
+    border-top : 1.5px solid rgb(100, 100, 100);   
+} */
+
+table.mat-table tr:last-child {
+    border-bottom : 1.5px solid rgb(100, 100, 100);   
+}
+
+table.mat-table tr td.mat-cell:last-of-type{
+    padding-right: 0px;
+    text-align: center;
+    color: rgb(100, 100, 100);
+}
+.mat-icon{
+    font-size: 20px;
+    color: rgb(171 166 166);
+    cursor: pointer;
+}
+
+#date-form-field .mat-datepicker-toggle-default-icon{
+ color:blue;
+ font-size: 35px;
+ height: 32px;
+ margin-left: -1px;
+ margin-top: 2px;
+ border-right: 1px solid black;
+ border-top: 1px solid black;
+ border-bottom: 1px solid black;
+
+}
+
+#date-form-field .mat-form-field-underline{
+    width: 0px;
+}
+
+#date-form-field .mat-form-field-flex{
+    align-items:center;
+    margin-top :15px;
+}
+
+#date-form-field input {
+    width:100%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+     height: 30px
+}
+#date-form-field {
+    width: 96%;
+    
+}
+/* 
+#date-form-field .mat-form-field-appearance-fill .mat-form-field-flex{
+    background: none;
+  border: 1px solid black;
+   
+}
+#date-form-field .mat-form-field-wrapper{
+   
+}
+
+#date-form-field .mat-form-field-infix {
+    margin: 0px;
+    vertical-align: middle;
+    
+}
+#date-form-field .mat-icon-button{
+    height: 2em;
+} */

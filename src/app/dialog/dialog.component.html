@@ -1,0 +1,177 @@
+<form [formGroup]="dialog_form" (ngSubmit)="SubmitForm()">
+    <div>
+    <h2 style="background: #3f51b5 ;color: white;" mat-dialog-title>{{title}}</h2>
+    <mat-dialog-content class="mat-typography">
+
+        <div style="width: 70vw;">
+                <div class="row">
+                    <div class="col-4 formLabelClass">Quote Id</div>
+                    <div class="col-8 formControlClass"> <input readonly style="background-color: gainsboro;"
+                            formControlName="QuoteID" type="text">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4 formLabelClass">Quote Type</div>
+                    <div class="col-8 formControlClass"> <input formControlName="QuoteType" type="text">
+                        <span class="errorClass" *ngIf="QuoteType.invalid && (QuoteType.dirty || QuoteType.touched)">
+                            *Required</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4 formLabelClass">Sales</div>
+                    <div class="col-8 formControlClass">
+                        <input formControlName="Sales" type="text">
+                        <span class="errorClass" *ngIf="Sales.invalid && (Sales.dirty || Sales.touched)">
+                            *Required</span>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4 formLabelClass">Premium</div>
+                    <div class="col-8 formControlClass">
+                        <input type="text" formControlName="Premium">
+                        <span class="errorClass" *ngIf="Premium.invalid && (Premium.dirty || Premium.touched)">
+                            *Required</span>
+
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4 formLabelClass" style="margin-top: 5%;">Due Date</div>
+                    <div class="col-8">
+
+                        <table style="width: auto;">
+                            <tr>
+                                <td></td>
+                                <td> </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <mat-form-field id="date-form-field">
+                                        <mat-label></mat-label>
+                                        <input style="width: 100%;text-align: center" matInput [matDatepicker]="picker"
+                                            formControlName="DueDate" (dateInput)="addEvent('input', $event)">
+                                        <mat-datepicker-toggle matSuffix [for]="picker">
+
+                                        </mat-datepicker-toggle>
+                                        <mat-datepicker #picker></mat-datepicker>
+
+                                    </mat-form-field>
+
+
+                                </td>
+                                <td style="padding-top: 12px;">
+                                    <div class="abc">
+                                        <mat-icon>keyboard_arrow_up</mat-icon>
+                                    </div>
+                                    <div class="abcd"> <input style="height: 100%;width: 100%;" type="text" [value]="hours|number : '1.0-0'"> </div>
+                                    <div class="abc">
+                                        <mat-icon>keyboard_arrow_down</mat-icon>
+                                    </div>
+                                </td>
+
+                                <td style="padding-top: 12px;">
+                                    <div class="abc">
+                                        <mat-icon>keyboard_arrow_up</mat-icon>
+                                    </div>
+                                    <div class="abcd">
+                                        <input  style="height: 100%;width: 100%; ;" type="text" [value]="minutes |number : '2.0-0'">
+                                    </div>
+                                    <div class="abc">
+                                        <mat-icon>keyboard_arrow_down</mat-icon>
+                                    </div>
+                                </td>
+                                <td style="padding-top: 12px;">
+                                    <div class="abcd"> <input style="height: 100%;width: 100%;" value="AM" type="text">
+
+                                    </div>
+                                </td>
+                                <td> <span class="errorClass"
+                                        *ngIf="DueDate.invalid && (DueDate.dirty || DueDate.touched)"> *Required</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-4 formLabelClass">Description</div>
+                    <div class="col-8"> <textarea style="width: 100%; " formControlName="Description"></textarea>
+                        <span class="errorClass"
+                            *ngIf="Description.invalid && (Description.dirty || Description.touched)"> *Required</span>
+
+                    </div>
+                </div>
+
+
+                  </div>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button mat-button mat-dialog-close>Cancel</button>
+        <button type="submit" mat-button [mat-dialog-close]="true" cdkFocusInitial>Submit</button>
+    </mat-dialog-actions>
+
+</div>
+</form>
+ 
+<!-- 
+
+
+<div style="width: 70vw; " class="row">
+    <div class="col-12">  <table style="width: 100%;"  >
+
+        <tr>
+            <td class="labelClass">QuoteType </td>
+            <td class="inputClass"><input type="text"> </td>
+        </tr>
+       
+     <tr>
+         <td class="labelClass">Sales</td>
+         <td class="inputClass"><input type="text"> </td>
+     </tr>
+     <tr>
+         <td class="labelClass">Premium Amount</td>
+         <td class="inputClass"><input type="text"> </td>
+     </tr>
+     <tr style="height: 20px;">
+         <td class="labelClass">Due Date</td>
+         <td style="vertical-align: middle;width: 50%"> 
+
+         <div id="date-form-field" style="border: 1px solid black">
+            <mat-form-field style="height: 15px; " >
+                <mat-label>Choose a date</mat-label>
+                <input matInput [matDatepicker]="picker" [(ngModel)]="val" (dateInput)="addEvent('input', $event)">
+                <mat-datepicker-toggle matSuffix [for]="picker">
+                  <mat-icon>delete</mat-icon>
+                </mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+           
+         </div>
+              
+            </td>
+     </tr>
+     <tr >
+        <td colspan="2"  style="padding-left: 5%;">Description
+            <br>
+            <textarea style="width:100%"></textarea>
+        </td>
+        
+    </tr>
+     
+    </table></div>
+   
+  
+</div> -->

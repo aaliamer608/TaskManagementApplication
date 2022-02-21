@@ -1,0 +1,10 @@
+[{
+    "username": "admin",
+    "password":"admin",
+    "confirmpassword":"admin"
+},
+{
+    "username": "member",
+    "password":"member",
+    "confirmpassword":"member"
+}]

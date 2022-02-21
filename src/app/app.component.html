@@ -1,0 +1,7 @@
+<div class="container-fluid">
+   <h1 >Task Management System
+       <a *ngIf="login.isLoggedIn" style="float: right;font-size: 14px; cursor: pointer;" (click)="logOut()">Log Out</a>
+   </h1>
+   
+    <router-outlet></router-outlet>
+</div>
