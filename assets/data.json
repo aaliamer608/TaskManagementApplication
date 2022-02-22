@@ -1,0 +1,194 @@
+[
+    {
+        "QuoteID": 1,
+        "QuoteType": "Auto",
+        "Description": "This is auto insurance",
+        "Sales": "John",
+        "DueDate": "1/1/2010",
+        "Premium": "240"
+    },
+    {
+        "QuoteID": 2,
+        "QuoteType": "House",
+        "Description": "This is house insurance",
+        "Sales": "John",
+        "DueDate": "1/1/2013",
+        "Premium": "116"
+    },
+    {
+        "QuoteID": 3,
+        "QuoteType": "Auto",
+        "Description": "This is auto insurance",
+        "Sales": "John",
+        "DueDate": "1/1/2010",
+        "Premium": "240"
+    },
+    {
+        "QuoteID": 4,
+        "QuoteType": "Boat",
+        "Description": "This is auto insurance",
+        "Sales": "Mary",
+        "DueDate": "1/1/2010",
+        "Premium": "340"
+    },
+    {
+        "QuoteID": 5,
+        "QuoteType": "Auto",
+        "Description": "This is auto insurance",
+        "Sales": "John",
+        "DueDate": "1/23/2008",
+        "Premium": "400"
+    },
+    {
+        "QuoteID": 6,
+        "QuoteType": "Auto",
+        "Description": "This is auto insurance",
+        "Sales": "Mary",
+        "DueDate": "1/1/2011",
+        "Premium": "300"
+    },
+    {
+        "QuoteID": 7,
+        "QuoteType": "Auto",
+        "Description": "This is auto insurance",
+        "Sales": "John",
+        "DueDate": "1/1/2010",
+        "Premium": "240"
+    },
+    {
+        "QuoteID": 8,
+        "QuoteType": "House",
+        "Description": "This is house insurance",
+        "Sales": "John",
+        "DueDate": "1/1/2013",
+        "Premium": "116"
+    },
+    {
+        "QuoteID": 9,
+        "QuoteType": "Auto",
+        "Description": "This is auto insurance",
+        "Sales": "John",
+        "DueDate": "1/1/2010",
+        "Premium": "240"
+    },
+    {
+        "QuoteID": 10,
+        "QuoteType": "Boat",
+        "Description": "This is auto insurance",
+        "Sales": "Mary",
+        "DueDate": "1/1/2010",
+        "Premium": "340"
+    },
+    {
+        "QuoteID": 11,
+        "QuoteType": "Auto",
+        "Description": "This is auto insurance",
+        "Sales": "John",
+        "DueDate": "1/23/2008",
+        "Premium": "400"
+    },
+    {
+        "QuoteID": 12,
+        "QuoteType": "Auto",
+        "Description": "This is auto insurance",
+        "Sales": "Mary",
+        "DueDate": "1/1/2011",
+        "Premium": "300"
+    },
+    {
+        "QuoteID": 13,
+        "QuoteType": "Auto",
+        "Description": "This is auto insurance",
+        "Sales": "John",
+        "DueDate": "1/1/2010",
+        "Premium": "240"
+    },
+    {
+        "QuoteID": 14,
+        "QuoteType": "House",
+        "Description": "This is house insurance",
+        "Sales": "John",
+        "DueDate": "1/1/2013",
+        "Premium": "116"
+    },
+    {
+        "QuoteID": 15,
+        "QuoteType": "Auto",
+        "Description": "This is auto insurance",
+        "Sales": "John",
+        "DueDate": "1/1/2010",
+        "Premium": "240"
+    },
+    {
+        "QuoteID": 16,
+        "QuoteType": "Boat",
+        "Description": "This is auto insurance",
+        "Sales": "Mary",
+        "DueDate": "1/1/2010",
+        "Premium": "340"
+    },
+    {
+        "QuoteID":17,
+        "QuoteType": "Auto",
+        "Description": "This is auto insurance",
+        "Sales": "John",
+        "DueDate": "1/23/2008",
+        "Premium": "400"
+    },
+    {
+        "QuoteID": 18,
+        "QuoteType": "Auto",
+        "Description": "This is auto insurance",
+        "Sales": "Mary",
+        "DueDate": "1/1/2011",
+        "Premium": "300"
+    },
+    {
+        "QuoteID": 19,
+        "QuoteType": "Auto",
+        "Description": "This is auto insurance",
+        "Sales": "John",
+        "DueDate": "1/1/2010",
+        "Premium": "240"
+    },
+    {
+        "QuoteID": 20,
+        "QuoteType": "House",
+        "Description": "This is house insurance",
+        "Sales": "John",
+        "DueDate": "1/1/2013",
+        "Premium": "116"
+    },
+    {
+        "QuoteID": 21,
+        "QuoteType": "Auto",
+        "Description": "This is auto insurance",
+        "Sales": "John",
+        "DueDate": "1/1/2010",
+        "Premium": "240"
+    },
+    {
+        "QuoteID": 22,
+        "QuoteType": "Boat",
+        "Description": "This is auto insurance",
+        "Sales": "Mary",
+        "DueDate": "1/1/2010",
+        "Premium": "340"
+    },
+    {
+        "QuoteID": 23,
+        "QuoteType": "Auto",
+        "Description": "This is auto insurance",
+        "Sales": "John",
+        "DueDate": "1/23/2008",
+        "Premium": "400"
+    },
+    {
+        "QuoteID": 24,
+        "QuoteType": "Auto",
+        "Description": "This is auto insurance",
+        "Sales": "Mary",
+        "DueDate": "1/1/2011",
+        "Premium": "300"
+    }
+]
