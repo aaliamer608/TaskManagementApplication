@@ -63,8 +63,42 @@ export class HomeComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     
    // let x = this.getPageList(15, 1, 5)
+   debugger;
+   
+   this.quotes = [];
+   let qts = JSON.stringify(localStorage.getItem('quotes'));
+   this.quotes = JSON.parse(JSON.parse(qts));
+ if(!this.quotes){
+   this.dataservice.getData().subscribe(data=> {
+     this.quotes = data;
+     localStorage.setItem('quotes', JSON.stringify(this.quotes));
+     this.dataSource.data = this.quotes;
+    this.displayedColumns = Object.keys(this.dataSource.data[0]);
+    this.displayedColumns.push('Actions');
+    this.paginator.pageIndex = 0;
+    this.paginator.pageSize = this.pageSizeOptions[0];
+    this.paginator.length = this.dataSource.data.length;
+  
+    this.congfigPaginator();
+    this.calculateRangeLabel() ;
     
-    this.quotes = this.dataservice.fillData();
+   })
+ } else{
+  this.dataSource.data = this.quotes;
+  this.displayedColumns = Object.keys(this.dataSource.data[0]);
+  this.displayedColumns.push('Actions');
+  this.paginator.pageIndex = 0;
+  this.paginator.pageSize = this.pageSizeOptions[0];
+  this.paginator.length = this.dataSource.data.length;
+
+  this.congfigPaginator();
+  this.calculateRangeLabel() ;
+  
+ }
+ 
+
+
+  //  this.quotes = this.dataservice.fillData();
     this.dataSource.data = this.quotes;
     this.displayedColumns = Object.keys(this.dataSource.data[0]);
     this.displayedColumns.push('Actions');

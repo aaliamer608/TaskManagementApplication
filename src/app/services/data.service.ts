@@ -12,16 +12,8 @@ datachanged:Subject<IQuote[]> = new Subject<IQuote[]>();
   constructor( private http:HttpClient) { }
 
 getData(){
-  this.quotes = [];
-    let qts = JSON.stringify(localStorage.getItem('quotes'));
-    this.quotes = JSON.parse(JSON.parse(qts));
-  if(!this.quotes){
-    this.http.get<IQuote[]>('assets/data.json').subscribe(data=> {
-      this.quotes = data;
-      localStorage.setItem('quotes', JSON.stringify(this.quotes));
-    })
-  }
-    
+   return  this.http.get<IQuote[]>('assets/data.json')
+     
 }
 
 fillData(){
