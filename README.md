@@ -1,4 +1,3 @@
 ﻿# AngularTest
-For testing, use
-username : input
-password : input
+For testing, add new user.
+
