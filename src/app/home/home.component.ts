@@ -69,8 +69,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
    let qts = JSON.stringify(localStorage.getItem('quotes'));
    this.quotes = JSON.parse(JSON.parse(qts));
  if(!this.quotes){
-   this.dataservice.getData().subscribe(data=> {
-     this.quotes = data;
+   
+     this.quotes = this.dataservice.quotes;
+     
      localStorage.setItem('quotes', JSON.stringify(this.quotes));
      this.dataSource.data = this.quotes;
     this.displayedColumns = Object.keys(this.dataSource.data[0]);
@@ -82,7 +83,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.congfigPaginator();
     this.calculateRangeLabel() ;
     
-   })
+   
  } else{
   this.dataSource.data = this.quotes;
   this.displayedColumns = Object.keys(this.dataSource.data[0]);
@@ -109,6 +110,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.congfigPaginator();
     this.calculateRangeLabel() ;
     this.dataservice.datachanged.subscribe(x=>{
+      debugger
       let desc = this.desc;
       let colmnsort = this.colmnsort 
       this.quotes = x;
@@ -203,6 +205,9 @@ updateTask(task: any){
     });
 }
 
+details(task:any){
+    this.route.navigate(['quote-details'],{queryParams:{id:task['QuoteID']}});
+}
 deleteTask(task:any){
  // const dialogRef = this.dialog.open(,)
  this.ConfirmDeleteDialog = this.dialog.open(this.ConfirmDelete);

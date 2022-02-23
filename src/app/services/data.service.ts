@@ -9,7 +9,10 @@ import { IQuote } from '../models/IQuote';
 export class DataService {
 quotes:IQuote[] = [];
 datachanged:Subject<IQuote[]> = new Subject<IQuote[]>();
-  constructor( private http:HttpClient) { }
+ 
+constructor( private http:HttpClient) {
+   this.LoadQuotes();
+   }
 
 getData(){
    return  this.http.get<IQuote[]>('assets/data.json')
@@ -22,8 +25,9 @@ fillData(){
 }
 
 updateData(id:number, quote:IQuote){
-  debugger
- let x =  this.quotes.findIndex(q=>q.QuoteID == id);
+  debugger;
+  let xx = this.quotes;
+  let x =  this.quotes.findIndex(q=>q.QuoteID == id);
  this.quotes[x] = quote;
  localStorage.setItem('quotes', JSON.stringify(this.quotes));
  this.datachanged.next(this.quotes);
@@ -47,5 +51,26 @@ this.datachanged.next(this.quotes);
 
 }
 
+
+
+LoadQuotes() {
+  debugger;
+  this.quotes = [];
+  let qoutes = JSON.stringify(localStorage.getItem('quotes'));
+  this.quotes = JSON.parse(JSON.parse(qoutes));
+  console.log(this.quotes);
+
+  
+ 
+  if (!this.quotes) {
+    this.http.get<IQuote[]>('assets/data.json').subscribe(data => {
+      debugger;
+      this.quotes = data;
+      localStorage.setItem('quotes', JSON.stringify(this.quotes));
+    });
+  }
+
+
+}
 }
 

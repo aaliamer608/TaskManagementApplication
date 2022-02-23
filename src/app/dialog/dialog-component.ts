@@ -39,6 +39,12 @@ export class DialogComponent implements OnInit{
   
   }
 
+  changeQuoteType(e:any) {
+    this.dialog_form.get('QuoteType').setValue(e.target.value, {
+       onlySelf: true
+    })
+  }
+
   ngOnInit(): void {
       this.dialog_form = new FormGroup({
         'QuoteID': new FormControl( 0, [Validators.required]),
@@ -81,6 +87,7 @@ export class DialogComponent implements OnInit{
     this.quote.DueDate =  moment( this.DueDate.value).format('MM/DD/YYYY').toString();   
 
     if(this.title == 'Update Quote'){
+      debugger
       this.dataservice.updateData(this.quote.QuoteID, this.quote);
      }
      else{

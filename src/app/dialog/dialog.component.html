@@ -12,7 +12,13 @@
                 </div>
                 <div class="row">
                     <div class="col-4 formLabelClass">Quote Type</div>
-                    <div class="col-8 formControlClass"> <input formControlName="QuoteType" type="text">
+                    <div class="col-8 formControlClass">
+                        <select formControlName="name" (change)="changeQuoteType($event)">
+                            <option >Auto</option>
+                            <option>Boat</option>
+                            <option >Home</option>
+                            <option>General</option>
+                          </select>
                         <span class="errorClass" *ngIf="QuoteType.invalid && (QuoteType.dirty || QuoteType.touched)">
                             *Required</span>
                     </div>

@@ -11,13 +11,15 @@ import {HttpClientModule } from "@angular/common/http"
 import { AngularMaterialModule } from './angular-material.module';
 import { DialogComponent } from './dialog/dialog-component';
 import { MatNativeDateModule } from '@angular/material/core';
+import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    DialogComponent
+    DialogComponent,
+    QuoteDetailsComponent
   ],
   imports: [
     BrowserModule,

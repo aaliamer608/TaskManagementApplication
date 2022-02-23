@@ -82,7 +82,7 @@
       <ng-container matColumnDef="Actions">
         <th mat-header-cell *matHeaderCellDef>  </th>
         <td mat-cell *matCellDef="let element"> 
-          <mat-icon aria-hidden="false" aria-label="details">remove_red_eye</mat-icon> &nbsp;
+          <mat-icon aria-hidden="false" aria-label="details" (click)="details(element)">remove_red_eye</mat-icon> &nbsp;
           <mat-icon aria-hidden="false" aria-label="edit" (click)="updateTask(element)">edit</mat-icon> &nbsp;
           <mat-icon aria-hidden="false" aria-label="delete" (click)="deleteTask(element)">delete</mat-icon>
             

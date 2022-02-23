@@ -13,6 +13,7 @@ export class AuthService {
   }
 
   LoadUsers() {
+    debugger;
     this.users = [];
     let usrs = JSON.stringify(localStorage.getItem('users'));
     this.users = JSON.parse(usrs);
@@ -21,6 +22,8 @@ export class AuthService {
       this.http.get<IUser[]>('assets/users.json').subscribe(data => {
         this.users = data;
         localStorage.setItem('users', JSON.stringify(this.users));
+
+        
       });
     }
 
