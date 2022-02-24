@@ -4,7 +4,7 @@
         <td colspan="2" >
          
           
-          <img height="200" width="250" *ngIf="quote.QuoteType =='Boat' || quote.QuoteType == 'Auto' || quote.QuoteType =='House' else notfound "  src="../../assets/{{quote.QuoteType|lowercase}}.png">
+          <img height="200" width="250" *ngIf="quote.QuoteType =='Boat' || quote.QuoteType == 'Auto' || quote.QuoteType =='House' else notfound "  src="assets/{{quote.QuoteType|lowercase}}.png">
        
         </td>
         </tr>
@@ -42,6 +42,6 @@
  
 
 <ng-template #notfound>
-  <img height="200" width="250" src="../../assets/insurance.png">
+  <img height="200" width="250" src="assets/insurance.png">
          
 </ng-template>
